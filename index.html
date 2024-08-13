@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/input.css" rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
     <title>Portofolio</title>
 </head>
 <body>
     <!-- Hero Section Start -->
-    <section id="Home" class="pt-24 md:pt-12 bg-primary min-h-screen">
+    <section id="Home" class="bg-primary min-h-screen">
         <div class="container-fluid">
-            <div class="flex flex-wrap">
-                <div class="w-full md:pt-36 self-stretch px-8 md:pl-16 lg:w-1/2">
-                    <h1 class="font-inter font-bold text-lg md:text-xl xl:text-3xl text-white">
+            <div class="flex flex-wrap pt-16 md:pt-20 lg:pt-20 xl:pt-36">
+                <div class="w-full self-stretch lg:pt-20 px-8 lg:pl-14 lg:pr-0 lg:w-3/5">
+                    <h1 class="font-inter font-bold text-sm md:text-2xl xl:text-4xl text-white">
                         Hello it’s Me
                     </h1>
-                    <h2 class="font-inter font-bold text-3xl lg:text-6xl text-white mt-2 md:mt-4">
+                    <h2 class="font-inter font-bold text-2xl md:text-5xl xl:text-7xl text-white mt-2 md:mt-4 xl:mt-6">
                         Angga Arindra Shonta
                     </h2>
-                    <p class="font-inter font-bold text-lg md:text-xl xl:text-4xl text-white mt-2 md:mt-4">
-                        And I’m a <span id="dynamic-text" class="text-bluePrimary font-inter font-bold text-lg md:text-xl xl:text-4xl">Text</span>
+                    <p class="font-inter font-bold text-sm md:text-2xl xl:text-4xl text-white mt-2 md:mt-4 xl:mt-6">
+                        And I’m a <span id="dynamic-text" class="text-bluePrimary font-inter font-bold text-sm md:text-2xl xl:text-4xl">Text</span>
                     </p>
-                    <p class="font-inter font-light text-sm md:text-xl text-white mt-2 md:mt-4 leading-relaxed mb-16 md:mb-24">
+                    <p class="font-inter font-light text-xs md:text-lg xl:text-2xl text-white mt-2 md:mt-4 xl:mt-6 leading-relaxed">
                         Vero praesentium libero rerum est repellendus. Mollitia et ipsam qui at ut magnam enim.
                     </p>
-                    <a href="#" class="text-lg md:text-xl font-sen font-bold text-white bg-bluePrimary py-4 px-10 rounded-xl shadow-xl shadow-cardBlue transition duration-300 ease-in-out hover:bg-black hover:shadow-none">
+                    <div class="flex justify-start items-center mt-2 md:mt-4 xl:mt-6 mb-10 md:mb-16 xl:mb-24">
+                        <div class="row-flex">
+                            <img src="./src/assets/linkedin.svg" alt="linkedin" class="h-4 w-4 md:h-5 md:w-5 xl:h-8 xl:w-8 linkedin-icon hover:opacity-0 transition-opacity duration-300">
+                        </div>
+                        <div class="row-flex">
+                            <img src="./src/assets/github.svg" alt="github" class="h-4 w-4 md:h-6 md:w-5 ml-5 xl:h-8 xl:w-8 github-icon hover:opacity-0 transition-opacity duration-300">
+                        </div>
+                    </div>                    
+                    <a href="#" class="text-xs md:text-lg xl:text-xl font-sen font-bold text-white bg-bluePrimary py-2 px-4 md:py-3 md:px-5 xl:py-4 xl:px-6 rounded-lg shadow-xl shadow-cardBlue transition duration-300 ease-in-out hover:bg-black hover:shadow-none">
                         Download CV
                     </a>
                 </div>
-                <div class="w-full self-end px-8 lg:w-1/2">
-                    <div class="mt-10 xl:mt-0">
+                <div class="w-auto self-end px-8 md:px-24 lg:px-0 lg:w-2/5">
+                    <div class="mt-10 lg:mt-0">
                         <img src="./src/assets/hero.png" alt="Hero Image" class="max-w-full mx-auto"/>
                     </div>
                 </div>
@@ -37,8 +46,9 @@
         </div>
     </section>    
     <!-- Hero Section End -->
-    <!-- JS Dynamic Test Start -->
+    <!-- JS Hero Section -->
     <script>
+        // JS Dynamic Text
         const texts = ['System Analyst', 'UI/UX Designer'];
         let index = 0;
 
@@ -47,8 +57,67 @@
             index = (index + 1) % texts.length;
         }
         setInterval(updateText, 2000);
+
+        // JS Hover Image
+        const linkedinIcon = document.querySelector('.linkedin-icon');
+        const githubIcon = document.querySelector('.github-icon');
+        linkedinIcon.addEventListener('mouseover', () => {
+            linkedinIcon.src = './src/assets/linkedin-hover.svg';
+        });
+
+        linkedinIcon.addEventListener('mouseout', () => {
+            linkedinIcon.src = './src/assets/linkedin.svg';
+        });
+
+        githubIcon.addEventListener('mouseover', () => {
+            githubIcon.src = './src/assets/github-hover.svg';
+        });
+
+        githubIcon.addEventListener('mouseout', () => {
+            githubIcon.src = './src/assets/github.svg';
+        });
     </script>
-    <!-- JS Dynamic Test End -->
+    <!-- JS Hero Section -->
+
+
+     <!-- About Me Section Start -->
+    <section id="Home" class="pt-24 md:pt-12 bg-secondary min-h-screen">
+        <div class="container-fluid">
+            <div class="flex flex-wrap">
+                <div class="w-full self-end px-8 lg:w-1/2">
+                    <div class="mt-10 xl:mt-0">
+                        <img src="./src/assets/hero.png" alt="Hero Image" class="max-w-full mx-auto"/>
+                    </div>
+                </div>
+                <div class="w-full md:pt-36 self-stretch px-8 md:pl-16 lg:w-1/2">
+                    <h1 class="font-inter font-bold text-base md:text-xl xl:text-3xl text-white">
+                        Hello it’s Me
+                    </h1>
+                    <h2 class="font-inter font-bold text-xl lg:text-6xl text-white mt-2 md:mt-4">
+                        Angga Arindra Shonta
+                    </h2>
+                    <p class="font-inter font-bold text-lg md:text-xl xl:text-4xl text-white mt-2 md:mt-4">
+                        And I’m a <span id="dynamic-text" class="text-bluePrimary font-inter font-bold text-lg md:text-xl xl:text-4xl">Text</span>
+                    </p>
+                    <p class="font-inter font-light text-sm md:text-xl text-white mt-2 md:mt-4 leading-relaxed">
+                        Vero praesentium libero rerum est repellendus. Mollitia et ipsam qui at ut magnam enim.
+                    </p>
+                    <div class="flex justify-start items-center mt-2 md:mt-4 mb-16 md:mb-24">
+                        <div class="row-flex">
+                            <img src="./src/assets/linkedin.svg" alt="linkedin" class="max-w-full linkedin-icon hover:opacity-0 transition-opacity duration-300">
+                        </div>
+                        <div class="row-flex">
+                            <img src="./src/assets/github.svg" alt="github" class="max-w-full ml-6 github-icon hover:opacity-0 transition-opacity duration-300">
+                        </div>
+                    </div>                    
+                    <a href="#" class="text-lg md:text-xl font-sen font-bold text-white bg-bluePrimary py-4 px-10 rounded-xl shadow-xl shadow-cardBlue transition duration-300 ease-in-out hover:bg-black hover:shadow-none">
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- About Me Section End -->
 </body>
 </html>
 
