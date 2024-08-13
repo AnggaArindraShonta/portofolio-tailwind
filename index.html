@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Portofolio</title>
+</head>
+<body>
+    <!-- Hero Section Start -->
+    <section id="Home" class="pt-24 md:pt-12 bg-primary min-h-screen">
+        <div class="container-fluid">
+            <div class="flex flex-wrap">
+                <div class="w-full md:pt-36 self-stretch px-8 md:pl-16 lg:w-1/2">
+                    <h1 class="font-inter font-bold text-lg md:text-xl xl:text-3xl text-white">
+                        Hello it’s Me
+                    </h1>
+                    <h2 class="font-inter font-bold text-3xl lg:text-6xl text-white mt-2 md:mt-4">
+                        Angga Arindra Shonta
+                    </h2>
+                    <p class="font-inter font-bold text-lg md:text-xl xl:text-4xl text-white mt-2 md:mt-4">
+                        And I’m a <span id="dynamic-text" class="text-bluePrimary font-inter font-bold text-lg md:text-xl xl:text-4xl">Text</span>
+                    </p>
+                    <p class="font-inter font-light text-sm md:text-xl text-white mt-2 md:mt-4 leading-relaxed mb-16 md:mb-24">
+                        Vero praesentium libero rerum est repellendus. Mollitia et ipsam qui at ut magnam enim.
+                    </p>
+                    <a href="#" class="text-lg md:text-xl font-sen font-bold text-white bg-bluePrimary py-4 px-10 rounded-xl shadow-xl shadow-cardBlue transition duration-300 ease-in-out hover:bg-black hover:shadow-none">
+                        Download CV
+                    </a>
+                </div>
+                <div class="w-full self-end px-8 lg:w-1/2">
+                    <div class="mt-10 xl:mt-0">
+                        <img src="./src/assets/hero.png" alt="Hero Image" class="max-w-full mx-auto"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- Hero Section End -->
+    <!-- JS Dynamic Test Start -->
+    <script>
+        const texts = ['System Analyst', 'UI/UX Designer'];
+        let index = 0;
+
+        function updateText() {
+            document.getElementById('dynamic-text').textContent = texts[index];
+            index = (index + 1) % texts.length;
+        }
+        setInterval(updateText, 2000);
+    </script>
+    <!-- JS Dynamic Test End -->
+</body>
+</html>
+
+<!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
