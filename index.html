@@ -32,13 +32,20 @@
                         <div class="row-flex">
                             <img src="./src/assets/github.svg" alt="github" class="h-4 w-4 md:h-6 md:w-5 ml-5 xl:h-8 xl:w-8 github-icon hover:opacity-0 transition-opacity duration-300">
                         </div>
-                    </div>                    
-                    <a href="#" class="text-xs md:text-lg xl:text-xl font-sen font-bold text-white bg-bluePrimary py-2 px-4 md:py-3 md:px-5 xl:py-4 xl:px-6 rounded-lg shadow-xl shadow-cardBlue transition duration-300 ease-in-out hover:bg-black hover:shadow-none">
-                        Download CV
-                    </a>
+                    </div>
+                    <div class="flex justify-start">
+                        <div class="relative group">
+                            <div class="absolute -inset-0.5 bg-bluePrimary blur rounded-lg transition-all duration-300 ease-in-out group-hover:bg-transparent opacity-75"></div>
+                            <button class="relative bg-bluePrimary py-2 px-5 md:py-3 md:px-6 xl:py-4 xl:px-9 rounded-lg md:rounded-xl transition duration-300 ease-in-out group hover:bg-black hover:shadow-none">
+                                <a href="" class="text-xs md:text-lg xl:text-2xl font-sen font-bold text-white block text-center">
+                                    Download CV
+                                </a>
+                            </button>
+                        </div>
+                    </div>                       
                 </div>
-                <div class="w-auto self-end px-8 md:px-24 lg:px-0 lg:w-2/5">
-                    <div class="mt-16 md:mt-0 lg:mt-0">
+                <div class="w-auto self-start px-8 md:px-24 lg:px-0 lg:w-2/5">
+                    <div class="mt-10 md:mt-0 lg:mt-0">
                         <img src="./src/assets/hero.png" alt="Hero Image" class="max-w-full mx-auto"/>
                     </div>
                 </div>
@@ -81,12 +88,12 @@
 
 
     <!-- About Me Section Start -->
-    <section id="Home" class="bg-secondary min-h-screen">
+    <section id="About Me" class="bg-secondary min-h-screen">
         <div class="container-fluid">
             <div class="flex flex-wrap pt-6 md:pt-20 lg:pt-20 xl:pt-36">
-                <div class="w-auto self-end px-8 md:px-24 lg:px-0 lg:w-2/5">
+                <div class="w-auto self-center px-8 md:px-24 lg:px-0 lg:w-2/5">
                     <div class="mt-10 lg:mt-0">
-                        <img src="./src/assets/aboutme.svg" alt="Hero Image" class="max-w-full mx-auto"/>
+                        <img src="./src/assets/aboutme.svg" alt="About Me Image" class="max-w-full mx-auto"/>
                     </div>
                 </div>
                 <div class="w-full self-stretch pt-6 lg:pt-14 xl:pt-24 px-8 md:px-14 lg:pr-14 lg:pl-0 lg:w-3/5">
@@ -96,7 +103,7 @@
                     <h2 class="font-inter font-normal text-xs md:text-lg xl:text-2xl text-white mt-1 md:mt-2 xl:mt-6">
                         System Analyst & UX/UI Designer
                     </h2>
-                    <p class="font-inter font-light text-xs md:text-lg xl:text-2xl text-white mt-4 md:mt-6 md:pb-10 xl:mt-8 align-middle text-justify leading-relaxed">
+                    <p class="font-inter font-light text-xs md:text-lg xl:text-2xl text-white mt-4 md:mt-6 pb-6 md:pb-10 xl:mt-8 align-middle text-justify leading-relaxed">
                         Et blanditiis sit neque provident soluta quibusdam. Ut optio nobis. Eligendi voluptas qui maxime id quo culpa qui. Nihil error necessitatibus distinctio explicabo et. Voluptas quas placeat. Quia aut aut vel harum ullam eum. Nihil minima fugit fuga tempore eum aut consequatur. Dolores iusto minus ab soluta in temporibus fuga. Quaerat sit sequi temporibus voluptatem. Dolore aut rerum enim aut suscipit facere. Libero .
                     </p>
                 </div>
@@ -107,8 +114,27 @@
 
 
     <!-- Our Services Section Start -->
-    <section>
-        <div class="flex items-center justify-center min-h-screen bg-gray-900">
+    <section class="bg-primary min-h-screen">
+        <div class="w-full text-center self-stretch pt-6 lg:pt-14 xl:pt-24 px-8 md:px-14">
+            <h1 class="font-inter font-bold text-sm md:text-2xl xl:text-4xl text-white">
+                About <span class="font-inter font-bold text-sm md:text-2xl xl:text-4xl text-bluePrimary">Me</span>
+            </h1>
+        </div>
+        <div class="container-fluid">
+            <div class="flex flex-wrap justify-center pt-6 md:pt-20 lg:pt-20 xl:pt-36">
+                <div class="flex flex-col items-center justify-start w-64 h-72 rounded-2xl bg-cardBlack p-6">
+                    <img src="./src/assets/systemanalyst.svg" alt="System Analyst Image" class="max-w-full mx-auto mb-4"/>
+                    <h2 class="font-inter font-normal text-xs md:text-lg xl:text-2xl text-white text-center">
+                        System Analyst
+                    </h2>
+                    <p class="font-inter font-light text-xs md:text-lg xl:text-2xl text-white mt-4 text-center leading-relaxed overflow-hidden">
+                        Et blanditiis sit neque provident soluta quibusdam. Ut optio nobis. Eligendi voluptas qui maxime id quo culpa qui. Nihil error necessitatibus distinctio explicabo et. Voluptas quas placeat. Quia aut aut vel harum ullam eum. Nihil minima fugit fuga tempore eum aut consequatur. Dolores iusto minus ab soluta in temporibus fuga. Quaerat sit sequi temporibus voluptatem. Dolore aut rerum enim aut suscipit facere. Libero.
+                    </p>
+                </div>
+            </div>
+        </div>        
+
+        <!-- <div class="flex items-center justify-center min-h-screen bg-gray-900">
             <div class="bg-gray-800 rounded-lg p-6 shadow-lg relative text-center w-96">
                 <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-600 p-4 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-white">
@@ -127,7 +153,7 @@
                 </p>
                 <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Read more</button>
             </div>
-        </div>        
+        </div>         -->
     </section>
     <!-- Our Services Section End -->
 </body>
