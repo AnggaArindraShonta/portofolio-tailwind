@@ -8,43 +8,87 @@
     <title>Portofolio</title>
 </head>
 <body>
+    <!-- Navbar Start -->
+    <nav class="bg-primary fixed w-full z-20 top-0 start-0">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 pl-8 md:pl-14 xl:pl-0">
+            <h1 class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-xl font-bold text-white font-inter md:text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap">A A</span>
+            </h1>
+            <div class="flex md:order-3 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ml-auto" id="navbar-sticky">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                    <li>
+                    <a href="#Home" class="block py-2 px-3 text-white bg-bluePrimary rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                    <a href="#About" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    </li>
+                    <li>
+                    <a href="#Services" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                    </li>
+                    <li>
+                    <a href="#Project" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Project</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+            const menu = document.getElementById('navbar-sticky');
+        
+            toggleButton.addEventListener('click', function() {
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>        
+    <!-- Navbar End -->
+
     <!-- Hero Section Start -->
-    <section id="Home" class="bg-primary min-h-screen">
+    <section id="Home" class="bg-primary">
         <div class="container-fluid">
-            <div class="flex flex-wrap pt-16 md:pt-20 lg:pt-20 xl:pt-36">
-                <div class="w-full self-stretch lg:pt-20 px-8 md:px-14 lg:pl-14 lg:pr-0 lg:w-3/5">
-                    <h1 class="font-inter font-bold text-sm md:text-2xl xl:text-4xl text-white">
+            <div class="flex flex-wrap pt-16 md:pt-20 xl:pt-36">
+                <div class="self-center w-full px-8 lg:pt-20 md:px-14 lg:pl-14 lg:pr-0 lg:w-3/5">
+                    <h1 class="text-sm font-bold text-white font-inter md:text-2xl xl:text-4xl">
                         Hello it’s Me
                     </h1>
-                    <h2 class="font-inter font-bold text-2xl md:text-5xl xl:text-7xl text-white mt-2 md:mt-4 xl:mt-6">
+                    <h2 class="mt-2 text-2xl font-bold text-white font-inter md:text-5xl xl:text-7xl md:mt-4 xl:mt-6">
                         Angga Arindra Shonta
                     </h2>
-                    <p class="font-inter font-bold text-sm md:text-2xl xl:text-4xl text-white mt-2 md:mt-4 xl:mt-6">
-                        And I’m a <span id="dynamic-text" class="text-bluePrimary font-inter font-bold text-sm md:text-2xl xl:text-4xl">Text</span>
+                    <p class="mt-2 text-sm font-bold text-white font-inter md:text-2xl xl:text-4xl md:mt-4 xl:mt-6">
+                        And I’m a <span id="dynamic-text" class="text-sm font-bold text-bluePrimary font-inter md:text-2xl xl:text-4xl">Text</span>
                     </p>
-                    <p class="font-inter font-light text-xs md:text-lg xl:text-2xl text-white mt-2 md:mt-4 xl:mt-6 leading-relaxed">
+                    <p class="mt-2 text-xs font-light leading-relaxed text-white font-inter md:text-lg xl:text-2xl md:mt-4 xl:mt-6">
                         Vero praesentium libero rerum est repellendus. Mollitia et ipsam qui at ut magnam enim.
                     </p>
-                    <div class="flex justify-start items-center mt-2 md:mt-4 xl:mt-6 mb-10 md:mb-16 xl:mb-24">
+                    <div class="flex items-center justify-start mt-2 mb-10 md:mt-4 xl:mt-6 md:mb-16 xl:mb-24">
                         <div class="row-flex">
-                            <img src="./src/assets/linkedin.svg" alt="linkedin" class="h-4 w-4 md:h-5 md:w-5 xl:h-8 xl:w-8 linkedin-icon hover:opacity-0 transition-opacity duration-300">
+                            <img src="./src/assets/linkedin.svg" alt="linkedin" class="w-4 h-4 transition-opacity duration-300 md:h-5 md:w-5 xl:h-8 xl:w-8 linkedin-icon hover:opacity-0">
                         </div>
                         <div class="row-flex">
-                            <img src="./src/assets/github.svg" alt="github" class="h-4 w-4 md:h-6 md:w-5 ml-5 xl:h-8 xl:w-8 github-icon hover:opacity-0 transition-opacity duration-300">
+                            <img src="./src/assets/github.svg" alt="github" class="w-4 h-4 ml-5 transition-opacity duration-300 md:h-6 md:w-5 xl:h-8 xl:w-8 github-icon hover:opacity-0">
                         </div>
                     </div>
                     <div class="flex justify-start">
                         <div class="relative group">
-                            <div class="absolute -inset-1 bg-bluePrimary blur rounded-lg transition-all duration-300 ease-in-out group-hover:bg-transparent opacity-75"></div>
-                            <button class="relative bg-bluePrimary py-2 px-5 md:py-3 md:px-6 xl:py-4 xl:px-9 rounded-lg md:rounded-xl transition duration-300 ease-in-out group hover:bg-black hover:shadow-none">
-                                <a href="" class="text-xs md:text-lg xl:text-2xl font-sen font-bold text-white block text-center">
+                            <div class="absolute transition-all duration-300 ease-in-out rounded-lg opacity-75 -inset-1 bg-bluePrimary blur-xl group-hover:bg-transparent"></div>
+                            <button class="relative px-5 py-2 transition duration-300 ease-in-out rounded-lg bg-bluePrimary md:py-3 md:px-6 xl:py-4 xl:px-9 md:rounded-xl group hover:bg-black hover:shadow-none">
+                                <a href="" class="block text-xs font-bold text-center text-white md:text-lg xl:text-2xl font-sen">
                                     Download CV
                                 </a>
                             </button>
                         </div>
                     </div>                       
                 </div>
-                <div class="w-auto self-start px-8 md:px-24 lg:px-0 lg:w-2/5">
+                <div class="self-start w-auto px-8 md:px-24 lg:px-0 lg:w-2/5">
                     <div class="mt-10 md:mt-0 lg:mt-0">
                         <img src="./src/assets/hero.png" alt="Hero Image" class="max-w-full mx-auto"/>
                     </div>
@@ -88,63 +132,195 @@
 
 
     <!-- About Me Section Start -->
-    <section id="About Me" class="bg-secondary min-h-screen">
+    <section id="About" class="min-h-screen bg-secondary">
         <div class="container-fluid">
             <div class="flex flex-wrap pt-6 md:pt-20 lg:pt-20 xl:pt-36">
-                <div class="w-auto self-center px-8 md:px-24 lg:px-0 lg:w-2/5">
+                <div class="self-center w-auto px-8 md:px-24 lg:px-0 lg:w-2/5">
                     <div class="mt-10 lg:mt-0">
                         <img src="./src/assets/aboutme.svg" alt="About Me Image" class="max-w-full mx-auto"/>
                     </div>
                 </div>
-                <div class="w-full self-stretch pt-6 lg:pt-14 xl:pt-24 px-8 md:px-14 lg:pr-14 lg:pl-0 lg:w-3/5">
-                    <h1 class="font-inter font-bold text-sm md:text-2xl xl:text-4xl text-white">
-                        About <span class="font-inter font-bold text-sm md:text-2xl xl:text-4xl text-bluePrimary">Me</span>
+                <div class="self-stretch w-full px-8 pt-6 lg:pt-14 xl:pt-24 md:px-14 lg:pr-14 lg:pl-0 lg:w-3/5">
+                    <h1 class="text-sm font-bold text-white font-inter md:text-2xl xl:text-4xl">
+                        About <span class="text-sm font-bold font-inter md:text-2xl xl:text-4xl text-bluePrimary">Me</span>
                     </h1>
-                    <h2 class="font-inter font-normal text-xs md:text-lg xl:text-2xl text-white mt-1 md:mt-2 xl:mt-6">
+                    <h2 class="mt-1 text-xs font-normal text-white font-inter md:text-lg xl:text-2xl md:mt-2 xl:mt-6">
                         System Analyst & UX/UI Designer
                     </h2>
-                    <p class="font-inter font-light text-xs md:text-lg xl:text-2xl text-white mt-4 md:mt-6 pb-6 md:pb-10 xl:mt-8 align-middle text-justify leading-relaxed">
+                    <p class="pb-6 mt-4 text-xs font-light leading-relaxed text-justify text-white align-middle font-inter md:text-lg xl:text-2xl md:mt-6 md:pb-10 xl:mt-8">
                         Et blanditiis sit neque provident soluta quibusdam. Ut optio nobis. Eligendi voluptas qui maxime id quo culpa qui. Nihil error necessitatibus distinctio explicabo et. Voluptas quas placeat. Quia aut aut vel harum ullam eum. Nihil minima fugit fuga tempore eum aut consequatur. Dolores iusto minus ab soluta in temporibus fuga. Quaerat sit sequi temporibus voluptatem. Dolore aut rerum enim aut suscipit facere. Libero .
-                    </p>
+                    </p>                    
                 </div>
             </div>
         </div>
     </section>      
     <!-- About Me Section End -->    
 
+
     <!-- Our Services Section Start -->
-    <section class="bg-primary min-h-screen">     
-        <div class="w-full text-center pt-6 lg:pt-14 xl:pt-24">
-            <h1 class="font-inter font-bold text-sm md:text-2xl xl:text-4xl text-white">
-                About <span class="text-bluePrimary">Me</span>
+    <section id="Services" class="min-h-screen pt-16 md:pt-20 xl:pt-36 bg-primary">     
+        <div class="w-full text-center">
+            <h1 class="text-sm font-bold text-white font-inter md:text-2xl xl:text-4xl">
+                Our <span class="text-bluePrimary">Services</span>
             </h1>
         </div>
-        <div class="container mx-auto">
-            <div class="flex flex-col lg:flex-row justify-center lg:justify-between gap-5 lg:gap-8 px-5 md:px-8 lg:px-12 pt-6 md:pt-10 lg:pt-14 xl:pt-20">
-                <!-- Card 1: System Analyst -->
-                <div class="flex group flex-col items-center justify-start w-full lg:w-1/2 xl:w-1/2 h-auto rounded-2xl bg-cardBlack p-3 md:p-6 transition-all duration-300 ease-in-out hover:ring-4 hover:ring-bluePrimary">
-                    <img src="./src/assets/systemanalyst.svg" alt="System Analyst Image" class="max-w-full mx-auto mb-4"/>
-                    <h2 class="font-inter font-semibold text-lg md:text-xl xl:text-2xl hover:md:text-xs hover:lg:text-xs xl:hover:text-xl text-white text-center group-hover:text-xs group-hover:md:text-lg group-hover:xl:text-xl">
-                        System Analyst
-                    </h2>
-                    <p class="font-inter font-light text-xs md:text-xs xl:text-xl text-white mt-4 align-middle text-justify text-pretty leading-relaxed">
-                        Et blanditiis sit neque provident soluta quibusdam. Ut optio nobis. Eligendi voluptas qui maxime id quo culpa qui. Nihil error necessitatibus distinctio explicabo et. Voluptas quas placeat. Quia aut aut vel harum ullam eum. Nihil minima fugit fuga tempore eum aut consequatur. Dolores iusto minus ab soluta in temporibus fuga. Quaerat sit sequi temporibus voluptatem. Dolore aut rerum enim aut suscipit facere. Libero.
-                    </p>
+        <div class="px-8 pt-8 container-fluid lg:px-12 lg:pt-14 xl:pt-20">
+            <div class="flex flex-col justify-center lg:flex-row lg:gap-10 xl:gap-16">
+                <!-- Card 1 -->
+                <div class="relative flex justify-center w-auto group lg:w-1/2 xl:w-1/2">
+                    <div class="absolute inset-0 transition-all duration-300 ease-in-out bg-transparent rounded-lg opacity-75 blur-2xl group-hover:bg-bluePrimary"></div>
+                    <div class="relative flex flex-col items-center justify-start p-3 mb-5 lg:mb-0 transition-all duration-300 ease-in-out rounded-2xl bg-cardBlack md:p-6 hover:ring-4 hover:ring-bluePrimary">
+                        <img src="./src/assets/systemanalyst.svg" alt="System Analyst Image" class="max-w-full mx-auto mb-4" />
+                        <h2 class="text-lg font-semibold text-center text-white transition-all duration-300 ease-in-out font-inter md:text-xl xl:text-2xl group-hover:text-xs group-hover:md:text-lg group-hover:xl:text-xl">
+                            System Analyst
+                        </h2>
+                        <p class="mt-4 text-xs font-light leading-relaxed text-justify text-white font-inter md:text-xs xl:text-base">
+                            Et blanditiis sit neque provident soluta quibusdam. Ut optio nobis. Eligendi voluptas qui maxime id quo culpa qui. Nihil error necessitatibus distinctio explicabo et. Voluptas quas placeat. Quia aut aut vel harum ullam eum. Nihil minima fugit fuga tempore eum aut consequatur. Dolores iusto minus ab soluta in temporibus fuga. Quaerat sit sequi temporibus voluptatem. Dolore aut rerum enim aut suscipit facere. Libero.
+                        </p>
+                    </div>
                 </div>
-                <!-- Card 2: UI/UX Designer -->
-                <div class="flex group flex-col items-center justify-start w-full lg:w-1/2 xl:w-1/2 h-auto rounded-2xl bg-cardBlack p-3 md:p-6 mb-5 lg:mb-0 transition-all duration-300 ease-in-out hover:ring-4 hover:ring-bluePrimary">
-                    <img src="./src/assets/brush.svg" alt="UI/UX Designer Image" class="max-w-full mx-auto mb-4"/>
-                    <h2 class="font-inter font-semibold text-lg md:text-xl xl:text-2xl text-white text-center transition-all duration-300 ease-in-out group-hover:text-xs group-hover:md:text-lg group-hover:xl:text-xl">
-                        UI/UX Designer
-                    </h2>
-                    <p class="font-inter font-light text-xs md:text-xs xl:text-xl text-white mt-4 align-middle text-justify text-pretty leading-relaxed">
-                        Et blanditiis sit neque provident soluta quibusdam. Ut optio nobis. Eligendi voluptas qui maxime id quo culpa qui. Nihil error necessitatibus distinctio explicabo et. Voluptas quas placeat. Quia aut aut vel harum ullam eum. Nihil minima fugit fuga tempore eum aut consequatur. Dolores iusto minus ab soluta in temporibus fuga. Quaerat sit sequi temporibus voluptatem. Dolore aut rerum enim aut suscipit facere. Libero.
-                    </p>
+                <!-- Card 2 -->
+                <div class="relative flex justify-center w-auto group lg:w-1/2 xl:w-1/2">
+                    <div class="absolute inset-0 transition-all duration-300 ease-in-out bg-transparent rounded-lg opacity-75 blur-2xl group-hover:bg-bluePrimary"></div>
+                    <div class="relative flex flex-col items-center justify-start p-3 mb-8 md:mb-0 transition-all duration-300 ease-in-out rounded-2xl bg-cardBlack md:p-6 hover:ring-4 hover:ring-bluePrimary">
+                        <img src="./src/assets/brush.svg" alt="UI/UX Designer Image" class="max-w-full mx-auto mb-4" />
+                        <h2 class="text-lg font-semibold text-center text-white transition-all duration-300 ease-in-out font-inter md:text-xl xl:text-2xl group-hover:text-xs group-hover:md:text-lg group-hover:xl:text-xl">
+                            UI/UX Designer
+                        </h2>
+                        <p class="mt-4 text-xs font-light leading-relaxed text-justify text-white font-inter md:text-xs xl:text-base">
+                            Et blanditiis sit neque provident soluta quibusdam. Ut optio nobis. Eligendi voluptas qui maxime id quo culpa qui. Nihil error necessitatibus distinctio explicabo et. Voluptas quas placeat. Quia aut aut vel harum ullam eum. Nihil minima fugit fuga tempore eum aut consequatur. Dolores iusto minus ab soluta in temporibus fuga. Quaerat sit sequi temporibus voluptatem. Dolore aut rerum enim aut suscipit facere. Libero.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Our Services Section End -->
+
+
+    <!-- Project Section Start -->
+    <section id="Project" class="bg-primary">
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./src/assets/aboutme.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./src/assets/brush.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./src/assets/github-hover.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./src/assets/linkedin-hover.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./src/assets/systemanalyst.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+            </div>
+    
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-800" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-800" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            </div>
+    
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+    </section>
+    <!-- Project Section End -->
+    
+    <!-- Script for Carousel -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselItems = document.querySelectorAll('[data-carousel-item]');
+            const indicators = document.querySelectorAll('[data-carousel-slide-to]');
+            const totalItems = carouselItems.length;
+            let currentIndex = 0;
+            let autoSlideInterval;
+    
+            // Function to show the current item
+            function showItem(index) {
+                carouselItems.forEach((item, i) => {
+                    item.classList.toggle('hidden', i !== index);
+                    indicators[i].classList.toggle('bg-gray-800', i !== index);
+                    indicators[i].classList.toggle('bg-blue-500', i === index);
+                });
+            }
+    
+            // Function to go to the next item
+            function nextItem() {
+                currentIndex = (currentIndex + 1) % totalItems;
+                showItem(currentIndex);
+            }
+    
+            // Function to go to the previous item
+            function prevItem() {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                showItem(currentIndex);
+            }
+    
+            // Function to reset auto-slide interval
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(nextItem, 3000);
+            }
+    
+            // Set initial auto-slide interval
+            autoSlideInterval = setInterval(nextItem, 3000);
+    
+            // Event listeners for controls
+            document.querySelector('[data-carousel-next]').addEventListener('click', () => {
+                nextItem();
+                resetAutoSlide();
+            });
+    
+            document.querySelector('[data-carousel-prev]').addEventListener('click', () => {
+                prevItem();
+                resetAutoSlide();
+            });
+    
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    showItem(currentIndex);
+                    resetAutoSlide();
+                });
+            });
+    
+            // Show the initial item
+            showItem(currentIndex);
+        });
+    </script>
+    
+    
+    
+
 </body>
 </html>
 
